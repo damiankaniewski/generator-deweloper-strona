@@ -2,10 +2,15 @@
   <div class="logo">LOGO</div>
   <nav class="nav-menu">
     <ul>
-      <li><a (click)="scrollToElement('about')">O mnie</a></li>
+      <li><a class="first-a" (click)="scrollToElement('about')">O mnie</a></li>
+      <div class="gap-solid"></div>
       <li><a (click)="scrollToElement('projects')">Inwestycje</a></li>
+      <div class="gap-solid"></div>
       <li><a (click)="scrollToElement('collaboration')">Współpraca</a></li>
-      <li><a (click)="scrollToElement('gallery')">Galeria</a></li>
+      <div class="gap-solid"></div>
+      <li>
+        <a class="last-a" (click)="scrollToElement('gallery')">Galeria</a>
+      </li>
     </ul>
   </nav>
   <button class="cta-button" (click)="scrollToElement('contact')">
@@ -19,5 +24,13 @@
       Zadowolony klient jest najważniejszy.<br />
       Zawsze na pierwszym miejscu.
     </h1>
+  </div>
+  <div class="main-content">
+    <div class="first-div">
+      <a href="#"><img src="assets/placeholder.jpg" alt="" /></a>
+    </div>
+    <div class="second-div">
+      <a href="#"><img src="assets/placeholder.jpg" alt="" /></a>
+    </div>
   </div>
 </div>
