@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Outfit";
+  font-weight: 900; /* Black */
+  src: url("/assets/fonts/Outfit-Black.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 700; /* Bold */
+  src: url("/assets/fonts/Outfit-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 800; /* ExtraBold */
+  src: url("/assets/fonts/Outfit-ExtraBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 200; /* ExtraLight */
+  src: url("/assets/fonts/Outfit-ExtraLight.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 300; /* Light */
+  src: url("/assets/fonts/Outfit-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 500; /* Medium */
+  src: url("/assets/fonts/Outfit-Medium.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 400; /* Regular */
+  src: url("/assets/fonts/Outfit-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 600; /* SemiBold */
+  src: url("/assets/fonts/Outfit-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-weight: 100; /* Thin */
+  src: url("/assets/fonts/Outfit-Thin.ttf") format("opentype");
+}
+
+$primary-color: #92e28b;
+$secondary-color: #62a76e;
+$text-color-bright: #ffffff;
+$text-color-dark: #000000;
+$background-color: #222;
+
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}

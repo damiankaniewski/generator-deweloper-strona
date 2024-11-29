@@ -24,15 +24,11 @@ import { CollaborationComponent } from './collaboration/collaboration.component'
     ContactComponent,
     PrivacyPolicyComponent,
     FooterComponent,
-    HeaderComponent,
     SignatureComponent,
-    CollaborationComponent
+    CollaborationComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HeaderComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

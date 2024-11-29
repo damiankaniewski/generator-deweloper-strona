@@ -1,0 +1,38 @@
+@import "../../styles.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $background-color; // Tło zdefiniowane w zmiennych
+  color: $text-color-bright;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+    padding: 0 30px 0 0;
+
+    .header__link {
+      padding: 5px;
+      text-decoration: none;
+      color: $text-color-bright;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $secondary-color; // Zmiana koloru na złoty
+      }
+
+      &--active {
+        color: $secondary-color; // Aktywny odnośnik
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,1 +1,23 @@
-<p>home works!</p>
+<div class="home-header">
+  <div class="logo">LOGO</div>
+  <nav class="nav-menu">
+    <ul>
+      <li><a (click)="scrollToElement('about')">O mnie</a></li>
+      <li><a (click)="scrollToElement('projects')">Inwestycje</a></li>
+      <li><a (click)="scrollToElement('collaboration')">Współpraca</a></li>
+      <li><a (click)="scrollToElement('gallery')">Galeria</a></li>
+    </ul>
+  </nav>
+  <button class="cta-button" (click)="scrollToElement('contact')">
+    Skontaktuj się
+  </button>
+</div>
+
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>
+      Zadowolony klient jest najważniejszy.<br />
+      Zawsze na pierwszym miejscu
+    </h1>
+  </div>
+</div>
