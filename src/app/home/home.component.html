@@ -1,6 +1,10 @@
 <div class="home-header">
-  <div class="logo">LOGO</div>
-  <nav class="nav-menu">
+  <div class="logo" data-aos="fade-right">
+    <a href="">
+      <img src="assets/images/logos/generator-logo.png" alt="generator logo" />
+    </a>
+  </div>
+  <nav class="nav-menu" data-aos="fade-down" data-aos-delay="300">
     <ul>
       <li><a class="first-a" (click)="scrollToElement('about')">O mnie</a></li>
       <div class="gap-solid"></div>
@@ -13,9 +17,11 @@
       </li>
     </ul>
   </nav>
-  <button class="cta-button" (click)="scrollToElement('contact')">
-    Skontaktuj się
-  </button>
+  <div data-aos="fade-left" data-aos-delay="600">
+    <button class="cta-button" (click)="scrollToElement('contact')">
+      Skontaktuj się
+    </button>
+  </div>
 </div>
 
 <div class="hero-section">
@@ -25,12 +31,28 @@
     alt="background"
   />
   <div class="hero-content">
-    <h1>
+    <img
+      data-aos="zoom-in"
+      data-aos-duration="2000"
+      src="assets/images/logos/generator-logo.png"
+      alt="generator logo"
+    />
+    <h1
+      data-aos="fade-in"
+      data-aos-delay="500"
+      data-aos-duration="2000"
+      src="assets/images/logos/generator-logo.png"
+    >
       Zadowolony klient jest najważniejszy.<br />
       Zawsze na pierwszym miejscu.
     </h1>
   </div>
-  <div class="main-content">
+  <div
+    class="main-content"
+    data-aos="fade-left"
+    data-aos-delay="900"
+    data-aos-duration="2000"
+  >
     <h2>Zobacz inwestycje</h2>
     <div class="image-container">
       <a href="#">

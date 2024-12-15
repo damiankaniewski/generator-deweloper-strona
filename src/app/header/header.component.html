@@ -1,14 +1,24 @@
-<!-- <header class="header">
+<header class="header" *ngIf="isVisible" data-aos="fade-down">
   <div class="header__logo">
-    <a (click)="scrollToElement('homepage')">
-      <img src="assets/logoGenerator.png" alt="Logo" class="logo" />
+    <a (click)="scrollToElement('home')">
+      <img
+        src="assets/images/logos/generator-logo.png"
+        alt="Logo"
+        class="logo"
+      />
     </a>
   </div>
-  <nav class="header__nav">
-    <a (click)="scrollToElement('about')">O mnie</a>
-    <a (click)="scrollToElement('projects')">Inwestycje</a>
-    <a (click)="scrollToElement('collaboration')">Współpraca</a>
-    <a (click)="scrollToElement('gallery')">Galeria</a>
-    <a (click)="scrollToElement('contact')">contact</a>
+  <nav class="header__nav" [ngClass]="{ active: menuActive }">
+    <a class="header__link" (click)="scrollToElement('about')">O mnie</a>
+    <a class="header__link" (click)="scrollToElement('projects')">Inwestycje</a>
+    <a class="header__link" (click)="scrollToElement('collaboration')"
+      >Współpraca</a
+    >
+    <a class="header__link" (click)="scrollToElement('gallery')">Galeria</a>
+    <a class="header__link" (click)="scrollToElement('contact')">Kontakt</a>
   </nav>
-</header> -->
+
+  <div class="menu-icon" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>

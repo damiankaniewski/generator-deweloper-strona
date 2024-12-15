@@ -1,0 +1,44 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+    filter: invert(100%);
+  }
+
+  .paragraphs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+
+    .about-paragraph {
+      background-color: #fefefe;
+      box-shadow: rgba($color: #000000, $alpha: 0.2) 0px 0px 15px;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      width: 30%;
+      font-size: 2rem;
+
+      .icon {
+        text-align: center;
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
