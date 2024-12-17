@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SignatureComponent } from './signature/signature.component';
 import { CollaborationComponent } from './collaboration/collaboration.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,18 @@ import { CollaborationComponent } from './collaboration/collaboration.component'
     AboutComponent,
     ProjectsComponent,
     GalleryComponent,
-    ContactComponent,
     PrivacyPolicyComponent,
     FooterComponent,
     SignatureComponent,
     CollaborationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HeaderComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HeaderComponent,
+    ContactComponent,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

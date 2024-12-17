@@ -1,0 +1,220 @@
+@import "../../styles.scss";
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  h3 {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+
+    iframe {
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      width: 40%;
+      height: 450px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      color: #333;
+
+      .form-group {
+        margin-bottom: 15px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          color: #444;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          height: 32px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 18px;
+        }
+
+        textarea {
+          height: 100px;
+          resize: vertical;
+        }
+      }
+
+      .form-group-double {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .form-group {
+          width: 50%;
+
+          #email {
+            width: 95%;
+          }
+        }
+      }
+
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .submit-button {
+        background-color: #fff;
+        border: 0 solid #e2e8f0;
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        color: #0d172a;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1;
+        padding: 1rem 1.6rem;
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: none #0d172a solid;
+        text-decoration-thickness: auto;
+        transform: scale(1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        z-index: 1;
+
+        &:hover {
+          background-color: #333;
+          color: #fff;
+          transform: scale(1.05);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+  .contact-details {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    a {
+      img {
+        height: 10rem;
+        transform: scale(1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .info {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-left: 20px;
+      font-weight: bold;
+      line-height: normal;
+
+      i {
+        color: #ff7801;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.8rem;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1536px) {
+  .main-container {
+    h3 {
+      font-size: 1.5rem !important;
+      text-align: center;
+    }
+
+    .content {
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+
+      .mapouter {
+        height: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-form {
+    width: 90% !important;
+  }
+}
+@media (max-width: 768px) {
+  .mapouter {
+    height: auto !important;
+    width: 90vw !important;
+
+    .gmap_canvas {
+      iframe {
+        height: 40vh !important;
+        width: 90vw !important;
+      }
+    }
+  }
+
+  .contact-details {
+    margin-top: 10px;
+    a {
+      img {
+        height: 5rem !important;
+      }
+    }
+
+    .info {
+      h2 {
+        font-size: 1.5rem !important;
+      }
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}

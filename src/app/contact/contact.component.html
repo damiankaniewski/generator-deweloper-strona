@@ -1,1 +1,82 @@
-<p>contact works!</p>
+<div class="main-container">
+  <h3>
+    Masz jakieś pytania? Zainteresowała Cię nasza oferta? Zapraszamy serdecznie
+    do kontaktu.
+  </h3>
+  <div class="content">
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe
+          src="https://maps.google.com/maps?q=brzozowa%20niepolomice&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          frameborder="0"
+          scrolling="no"
+          style="width: 650px; height: 450px"
+        ></iframe>
+        <style>
+          .mapouter {
+            position: relative;
+            height: 400px;
+            width: 650px;
+            background: #fff;
+          }
+        </style>
+      </div>
+    </div>
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      class="contact-form"
+    >
+      <div class="form-group">
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" formControlName="name" required />
+      </div>
+
+      <div class="form-group-double">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" formControlName="phone" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Treść wiadomości</label>
+        <textarea id="message" formControlName="message" required></textarea>
+      </div>
+
+      <div class="form-group-double">
+        <input
+          type="checkbox"
+          id="privacy-policy"
+          formControlName="privacyPolicy"
+          required
+        />
+        <label for="privacy-policy">Zgadzam się z polityką prywatności</label>
+      </div>
+
+      <button type="submit" class="submit-button">Wyślij</button>
+    </form>
+  </div>
+  <!-- Dodane informacje kontaktowe -->
+  <div class="contact-details">
+    <a href="https://www.n20.pl/" target="_blank">
+      <img src="assets/icons/n20logoCzarne.png" alt="" />
+    </a>
+    <div class="info">
+      <h2>Kontakt biura nieruchomości</h2>
+      <br />
+      <p><i class="fa-solid fa-envelope"></i> biuro&#64;N20.pl</p>
+      <p><i class="fa-solid fa-phone"></i> +48 12 433 38 78</p>
+      <p><i class="fa-solid fa-mobile"></i> +48 790 557 504</p>
+      <p><i class="fa-solid fa-mobile"></i> +48 790 557 057</p>
+      <p>
+        <i class="fa-solid fa-location-dot"></i> Plac Wolnica 13/21, 31-060
+        Kraków
+      </p>
+    </div>
+  </div>
+</div>
