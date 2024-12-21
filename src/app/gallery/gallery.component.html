@@ -1,1 +1,11 @@
-<p>gallery works!</p>
+<div class="gallery">
+  <button class="arrow left" (click)="prevImage()">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+
+  <img [src]="images[currentIndex]" alt="Image" class="image" />
+
+  <button class="arrow right" (click)="nextImage()">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>

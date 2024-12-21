@@ -1,0 +1,49 @@
+.gallery {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.left {
+      left: 20px;
+    }
+
+    &.right {
+      right: 20px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}

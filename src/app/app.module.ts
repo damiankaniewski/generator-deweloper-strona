@@ -12,7 +12,6 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SignatureComponent } from './signature/signature.component';
-import { CollaborationComponent } from './collaboration/collaboration.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { HttpClientModule } from '@angular/common/http';
     PrivacyPolicyComponent,
     FooterComponent,
     SignatureComponent,
-    CollaborationComponent,
   ],
   imports: [
     BrowserModule,

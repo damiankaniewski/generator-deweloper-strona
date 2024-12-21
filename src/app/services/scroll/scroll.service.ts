@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ScrollService {
   constructor() {}
 
-  scrollToElement(element: HTMLElement, offset: number = 80): void {
+  scrollToElement(element: HTMLElement, offset: number = 100): void {
     if (element) {
       const elementTop =
         element.getBoundingClientRect().top + window.pageYOffset;

@@ -1,0 +1,21 @@
+@import "../../styles.scss";
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
+  background-color: #555;
+  color: #fff;
+
+  div {
+    padding-right: 20px;
+    p {
+      color: #aaa;
+      text-align: right;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

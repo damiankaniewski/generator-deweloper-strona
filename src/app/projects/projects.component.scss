@@ -1,0 +1,75 @@
+h2 {
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.project-tile {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s;
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  .image-container {
+    position: relative;
+    height: 500px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.5s, transform 0.3s;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 1rem 3rem;
+      font-size: 1.2rem;
+    }
+  }
+}
