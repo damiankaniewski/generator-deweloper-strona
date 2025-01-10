@@ -104,7 +104,7 @@
         z-index: 1;
 
         &:hover {
-          background-color: #333;
+          background-color: #62a76e;
           color: #fff;
           transform: scale(1.05);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -127,6 +127,7 @@
         height: 10rem;
         transform: scale(1);
         transition: transform 0.3s ease;
+        filter: invert(100%);
 
         &:hover {
           transform: scale(1.05);
@@ -145,7 +146,7 @@
       line-height: normal;
 
       i {
-        color: #ff7801;
+        color: #62a76e;
       }
 
       h2 {
