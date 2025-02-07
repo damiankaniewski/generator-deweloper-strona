@@ -27,7 +27,7 @@ export class GalleryComponent {
     'assets/images/Mietniow/Mietniow_8.jpg',
     'assets/images/Mietniow/Mietniow_9.jpg',
     'assets/images/Mietniow/Mietniow_10.jpg',
-    'assets/images/Mietniow/Mietniow_11.jpg',
+    'assets/images/Mietniow/Mietniow_11.jpg', // generator@adres.pl - 694984943 - bez facebook - bez instagrama - 32-420 Gdów ul. Winiary 98 - rzetelnosc zmienic - generator-deweloper.pl
   ];
   currentIndex: number = 0;
 

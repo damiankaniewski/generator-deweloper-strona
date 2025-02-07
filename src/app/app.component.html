@@ -1,10 +1,14 @@
-<app-header id="header"></app-header>
-<div id="content">
-  <app-home id="home"></app-home>
-  <app-about id="about"></app-about>
-  <app-projects id="projects"></app-projects>
-  <app-gallery id="gallery"></app-gallery>
-  <app-contact id="contact"></app-contact>
+<router-outlet></router-outlet>
+
+<div *ngIf="!isPrivacyPolicyPage">
+  <app-header id="header"></app-header>
+  <div id="content">
+    <app-home id="home"></app-home>
+    <app-about id="about"></app-about>
+    <app-projects id="projects"></app-projects>
+    <app-gallery id="gallery"></app-gallery>
+    <app-contact id="contact"></app-contact>
+  </div>
   <app-footer id="footer"></app-footer>
   <app-signature id="signature"></app-signature>
 </div>
