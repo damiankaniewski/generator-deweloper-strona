@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -18,53 +18,81 @@ interface Project {
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
   private readonly apiUrl =
-    'https://lrfrc67h54.execute-api.eu-central-1.amazonaws.com/prd/get-items';
-  private readonly filesApiUrl = 'https://your-api.com/get-files?folder=';
+    'https://xyimp2s9s3.execute-api.eu-north-1.amazonaws.com/prd/get-items';
+  private readonly filesApiUrl =
+    'https://xyimp2s9s3.execute-api.eu-north-1.amazonaws.com/prd/list-files';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private ngZone: NgZone) {}
 
   ngOnInit(): void {
     this.http
-      .get<{ statusCode: number; body: any[] }>(this.apiUrl)
-      .subscribe((response) => {
-        if (response.statusCode === 200 && Array.isArray(response.body)) {
-          this.projects = response.body.map((project: any) => ({
-            ...project,
-            images: [],
-          }));
+      .get<{ statusCode: number; body: string }>(this.apiUrl)
+      .subscribe(async (response) => {
+        if (response.statusCode === 200) {
+          try {
+            const parsedBody = JSON.parse(response.body);
 
-          this.projects.forEach((project) => {
-            this.fetchImageLinks(project.Id).then(
-              (images) => (project.images = images)
-            );
-          });
+            if (Array.isArray(parsedBody)) {
+              this.projects = parsedBody.map((project: any) => ({
+                ...project,
+                images: [],
+              }));
 
-          setInterval(() => {
-            this.projects.forEach((project) => {
-              if (project.images.length > 0) {
-                const firstImage = project.images.shift();
-                if (firstImage) {
-                  project.images.push(firstImage);
-                }
+              for (const project of this.projects) {
+                project.images = await this.fetchImageLinks(project.Id);
               }
-            });
-          }, 5000);
+
+              setInterval(() => {
+                this.rotateImages();
+              }, 5000);
+            }
+          } catch (error) {
+            console.error('❌ Błąd parsowania JSON:', error);
+          }
         }
       });
   }
 
-  private fetchImageLinks(projectId: string): Promise<string[]> {
-    return this.http
-      .get<{ files?: string[] }>(`${this.filesApiUrl}${projectId}`)
-      .toPromise()
-      .then((response) =>
-        response?.files
-          ? response.files.map(
-              (file) =>
-                `https://your-s3-bucket-url.s3.eu-central-1.amazonaws.com/${projectId}/${file}`
-            )
-          : []
-      )
-      .catch(() => []);
+  private rotateImages(): void {
+    this.projects.forEach((project) => {
+      if (project.images.length > 1) {
+        const firstImage = project.images.shift();
+        if (firstImage) {
+          project.images.push(firstImage);
+        }
+      }
+    });
+  }
+
+  private async fetchImageLinks(projectId: string): Promise<string[]> {
+    try {
+      console.log(`🔄 Pobieram zdjęcia dla projektu: ${projectId}`);
+
+      const response = await this.http
+        .post<string[]>(this.filesApiUrl, { folder: projectId })
+        .toPromise();
+
+      console.log(`✅ Odpowiedź API (${projectId}):`, response);
+
+      const fileNames = response ?? [];
+
+      if (fileNames.length === 0) {
+        console.warn(`⚠️ Brak plików dla projektu ${projectId}`);
+        return [];
+      }
+
+      const baseUrl =
+        'https://generator-412381761586-bucket.s3.eu-north-1.amazonaws.com/';
+      const imageUrls = fileNames.map(
+        (fileName) => `${baseUrl}${projectId}/${fileName}`
+      );
+
+      console.log(`📸 Zdjęcia (${projectId}):`, imageUrls);
+
+      return imageUrls;
+    } catch (error) {
+      console.error(`❌ Błąd pobierania zdjęć dla ${projectId}:`, error);
+      return [];
+    }
   }
 }
