@@ -33,10 +33,9 @@ export class ProjectsComponent implements OnInit {
             const parsedBody = JSON.parse(response.body);
 
             if (Array.isArray(parsedBody)) {
-              this.projects = parsedBody.map((project: any) => ({
-                ...project,
-                images: [],
-              }));
+              this.projects = parsedBody
+                .filter((project: any) => project.name) // Filtrujemy tylko te z "name"
+                .map((project: any) => ({ ...project, images: [] }));
 
               for (const project of this.projects) {
                 project.images = await this.fetchImageLinks(project.Id);
@@ -66,6 +65,9 @@ export class ProjectsComponent implements OnInit {
 
   private async fetchImageLinks(projectId: string): Promise<string[]> {
     try {
+      const project = this.projects.find((p) => p.Id === projectId);
+      if (!project || !project.name) return [];
+
       console.log(`🔄 Pobieram zdjęcia dla projektu: ${projectId}`);
 
       const response = await this.http

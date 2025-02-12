@@ -3,7 +3,7 @@
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   background-color: $background-color;
   color: $text-color-bright;
@@ -81,7 +81,7 @@
       position: fixed;
       top: 80px;
       right: 0;
-      height: calc(70% - 80px);
+      height: calc(70% - 60px);
       flex-direction: column;
       justify-content: center;
       align-items: center;

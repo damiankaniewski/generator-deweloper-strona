@@ -41,6 +41,18 @@ h2 {
         opacity: 1;
       }
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        ellipse 100% 80% at center,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.4) 100%
+      );
+      pointer-events: none;
+    }
   }
 
   .overlay {
@@ -49,27 +61,44 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
+    opacity: 1;
+    transition: background 0.3s, justify-content 0.3s, align-items 0.3s;
 
-    &:hover {
-      opacity: 1;
+    &:not(:hover) {
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      h3 {
+        padding: 10px;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+      }
+
+      p {
+        display: none;
+      }
     }
 
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+      p {
+        display: flex;
+      }
+    }
     h3 {
       margin: 0;
       font-size: 2rem;
+      transition: all 0.3s;
     }
 
     p {
       margin: 1rem 3rem;
       font-size: 1.2rem;
+      transition: opacity 0.3s;
     }
   }
 }

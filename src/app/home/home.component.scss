@@ -202,3 +202,9 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .home-header {
+    display: none;
+  }
+}

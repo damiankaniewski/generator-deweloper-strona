@@ -14,12 +14,13 @@ export class HeaderComponent {
   isVisible: boolean = false; // Flaga kontrolująca widoczność komponentu
 
   constructor(private scrollService: ScrollService) {}
-
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
-    this.isVisible = scrollPosition > 20; // Ustaw widoczność na podstawie scrolla
+
+    const isMobile = window.innerWidth < 768;
+    this.isVisible = isMobile || scrollPosition > 20; // Zawsze true dla mobilnych
   }
 
   scrollToElement(elementId: string): void {
