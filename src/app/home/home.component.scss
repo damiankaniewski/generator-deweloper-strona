@@ -185,6 +185,7 @@
 
       img {
         width: 100%;
+        margin: -5px;
       }
 
       .title-bar {
@@ -206,5 +207,35 @@
 @media (max-width: 768px) {
   .home-header {
     display: none;
+  }
+
+  .hero-section {
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    .hero-content {
+      text-align: center;
+      color: $text-color-bright;
+      padding: 20px;
+      width: 100vw;
+
+      img {
+        width: 30%;
+        max-width: 300px;
+        margin-top: 20px;
+      }
+    }
+
+    .main-content {
+      width: 80%;
+      padding: 20px;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
   }
 }

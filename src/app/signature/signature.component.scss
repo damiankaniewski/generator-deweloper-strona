@@ -19,3 +19,11 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .main-container {
+    font-size: 0.8rem !important;
+    div {
+      padding-right: 10px !important;
+    }
+  }
+}

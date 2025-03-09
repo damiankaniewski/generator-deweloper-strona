@@ -165,15 +165,16 @@
 @media (max-width: 1536px) {
   .main-container {
     h3 {
-      font-size: 1.5rem !important;
+      font-size: 1.3rem !important;
       text-align: center;
+      padding: 20px;
     }
 
     .content {
       flex-direction: column !important;
       justify-content: center !important;
       align-items: center !important;
-      width: 100% !important;
+      width: 90% !important;
 
       .mapouter {
         height: 100%;

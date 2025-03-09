@@ -102,3 +102,26 @@ h2 {
     }
   }
 }
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-tile {
+    .image-container {
+      height: 256px;
+    }
+
+    &:hover {
+      img {
+        transform: none !important;
+      }
+    }
+    .overlay {
+      pointer-events: none;
+    }
+  }
+}
