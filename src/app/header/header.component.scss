@@ -81,7 +81,7 @@
     align-items: center;
     text-align: center;
     height: auto;
-    padding: 10px;
+    padding: 10px 0 !important;
 
     &__nav {
       flex-direction: column;
@@ -108,7 +108,7 @@
     .menu-icon {
       display: block;
       position: absolute;
-      right: 10%;
+      right: 5%;
       top: 50%;
       transform: translateY(-50%);
     }
