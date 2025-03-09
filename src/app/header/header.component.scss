@@ -83,10 +83,6 @@
     height: auto;
     padding: 10px;
 
-    .header__logo {
-      margin-bottom: 10px;
-    }
-
     &__nav {
       flex-direction: column;
       align-items: center;
@@ -112,7 +108,9 @@
     .menu-icon {
       display: block;
       position: absolute;
-      right: 5%;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
