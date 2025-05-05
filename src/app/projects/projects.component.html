@@ -1,24 +1,44 @@
 <h2>Nasze inwestycje</h2>
 <div class="projects-grid">
-  <a
-    *ngFor="let project of projects"
-    class="project-tile"
-    [href]="project.link ? project.link : null"
-    [attr.target]="project.link ? '_blank' : null"
-    [attr.rel]="project.link ? 'noopener noreferrer' : null"
-    [class.disabled]="!project.link"
-  >
-    <div class="image-container">
-      <img
-        *ngIf="project.images.length > 0"
-        [src]="project.images[0]"
-        class="active"
-      />
-    </div>
+  <ng-container *ngFor="let project of projects">
+    <a
+      *ngIf="project.link; else noLink"
+      class="project-tile"
+      [href]="project.link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="image-container">
+        <img
+          *ngIf="project.images.length > 0"
+          [src]="project.images[0]"
+          class="active"
+          loading="lazy"
+        />
+      </div>
 
-    <div class="overlay">
-      <h3>{{ project.name }}</h3>
-      <p>{{ project.description }}</p>
-    </div>
-  </a>
+      <div class="overlay">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+      </div>
+    </a>
+
+    <ng-template #noLink>
+      <div class="project-tile disabled">
+        <div class="image-container">
+          <img
+            *ngIf="project.images.length > 0"
+            [src]="project.images[0]"
+            class="active"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="overlay">
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+        </div>
+      </div>
+    </ng-template>
+  </ng-container>
 </div>

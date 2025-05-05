@@ -1,48 +1,40 @@
 [
   {
-    "name": "Inwestycja A - Nowoczesne osiedle mieszkaniowe",
-    "description": "Inwestycja A to nowoczesne osiedle mieszkaniowe, które łączy komfort z funkcjonalnością. W ramach projektu powstanie 150 mieszkań o różnych metrażach, z przestronnymi tarasami i balkonami. Zadbano o dużą ilość terenów zielonych, plac zabaw dla dzieci oraz strefy relaksu dla dorosłych. Wszystko to w spokojnej okolicy, blisko centrum miasta, z doskonałym dostępem do komunikacji publicznej.",
-    "images": [
-      "assets/images/LednicaGornaTitle.jpg",
-      "assets/images/NiepolomiceTitle.jpg"
-    ],
-    "link": "/details/inwestycja-a"
+    "name": "Domy przy Brzozowej",
+    "description": "Opis",
+    "images": ["assets/images/brzozowa1.jpg"]
   },
   {
-    "name": "Inwestycja B - Ekologiczne osiedle z systemami OZE",
-    "description": "Inwestycja B to projekt budowy ekologicznego osiedla, które wykorzystuje nowoczesne technologie OZE (odnawialnych źródeł energii). W ramach inwestycji powstanie 100 mieszkań wyposażonych w panele fotowoltaiczne, systemy odzyskiwania wody deszczowej oraz energooszczędne technologie grzewcze. Osiedle będzie przyjazne dla środowiska i zapewni mieszkańcom niskie koszty eksploatacji. Dodatkowo, planowane są liczne tereny rekreacyjne, ścieżki rowerowe i place zabaw.",
+    "name": "Lednica Górna",
+    "description": "Inwestycja - Lednica Górna",
     "images": [
-      "assets/images/LednicaGornaTitle.jpg",
-      "assets/images/NiepolomiceTitle.jpg",
-      "assets/images/MietniowTitle.jpg"
-    ],
-    "link": "/details/inwestycja-b"
+      "assets/images/LednicaGorna/Lednica_1.jpg",
+      "assets/images/LednicaGorna/Lednica_2.jpg",
+      "assets/images/LednicaGorna/Lednica_3.jpg",
+      "assets/images/LednicaGorna/Lednica_4.jpg",
+      "assets/images/LednicaGorna/Lednica_5.jpg",
+      "assets/images/LednicaGorna/Lednica_6.jpg",
+      "assets/images/LednicaGorna/Lednica_7.jpg",
+      "assets/images/LednicaGorna/Lednica_8.jpg",
+      "assets/images/LednicaGorna/Lednica_9.jpg",
+      "assets/images/LednicaGorna/Lednica_10.jpg"
+    ]
   },
   {
-    "name": "Inwestycja C - Apartamenty z widokiem na jezioro",
-    "description": "Inwestycja C to luksusowe apartamenty z niepowtarzalnym widokiem na jezioro. Projekt obejmuje budowę 50 przestronnych apartamentów, z wysokiej jakości wykończeniem i nowoczesnymi udogodnieniami. Mieszkania posiadają duże okna, które zapewniają mnóstwo naturalnego światła, a część z nich ma również własne tarasy. Osiedle oferuje także basen, siłownię oraz strefę wellness dla mieszkańców, a lokalizacja w pobliżu jeziora zapewnia ciszę i spokój.",
+    "name": "Mietniów",
+    "description": "Inwestycja - Mietniów",
     "images": [
-      "assets/images/LednicaGornaTitle.jpg",
-      "assets/images/MietniowTitle.jpg"
-    ],
-    "link": "/details/inwestycja-c"
-  },
-  {
-    "name": "Inwestycja D - Innowacyjne biura w centrum miasta",
-    "description": "Inwestycja D to nowoczesny kompleks biurowy, który powstanie w samym centrum miasta. Budynek zostanie zaprojektowany z myślą o firmach szukających elastycznych przestrzeni do pracy. Dzięki innowacyjnym rozwiązaniom technologicznym, przestrzeniom coworkingowym i przestronnym salom konferencyjnym, kompleks biurowy stanie się idealnym miejscem do prowadzenia biznesu. Dodatkowo, na dachu budynku zaplanowana jest strefa wypoczynkowa z widokiem na panoramę miasta.",
-    "images": [
-      "assets/images/NiepolomiceTitle.jpg",
-      "assets/images/MietniowTitle.jpg"
-    ],
-    "link": "/details/inwestycja-d"
-  },
-  {
-    "name": "Inwestycja E - Luksusowe wille na przedmieściach",
-    "description": "Inwestycja E to projekt budowy luksusowych willi na przedmieściach, zaprojektowanych z myślą o rodzinach szukających prywatności i przestrzeni. Każda willa ma własny ogród, przestronną kuchnię, kilka sypialni oraz garaż. Dodatkowo, każda nieruchomość jest wyposażona w nowoczesne systemy smart home, które umożliwiają zdalne sterowanie oświetleniem, ogrzewaniem oraz systemem bezpieczeństwa. Całość osiedla otoczona jest pięknymi terenami zielonymi, idealnymi do spacerów i rekreacji.",
-    "images": [
-      "assets/images/LednicaGornaTitle.jpg",
-      "assets/images/NiepolomiceTitle.jpg"
-    ],
-    "link": "/details/inwestycja-e"
+      "assets/images/Mietniow/Mietniow_1.jpg",
+      "assets/images/Mietniow/Mietniow_2.jpg",
+      "assets/images/Mietniow/Mietniow_3.jpg",
+      "assets/images/Mietniow/Mietniow_4.jpg",
+      "assets/images/Mietniow/Mietniow_5.jpg",
+      "assets/images/Mietniow/Mietniow_6.jpg",
+      "assets/images/Mietniow/Mietniow_7.jpg",
+      "assets/images/Mietniow/Mietniow_8.jpg",
+      "assets/images/Mietniow/Mietniow_9.jpg",
+      "assets/images/Mietniow/Mietniow_10.jpg",
+      "assets/images/Mietniow/Mietniow_11.jpg"
+    ]
   }
 ]
