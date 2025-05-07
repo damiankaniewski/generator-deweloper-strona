@@ -1,12 +1,12 @@
 [
   {
     "name": "Domy przy Brzozowej",
-    "description": "Opis",
+    "description": "Przyjazna, zielona okolica w rejonie Zakrzowa.",
     "images": ["assets/images/brzozowa1.jpg"]
   },
   {
     "name": "Lednica Górna",
-    "description": "Inwestycja - Lednica Górna",
+    "description": "Komfort, spokój i bliskość natury.",
     "images": [
       "assets/images/LednicaGorna/Lednica_1.jpg",
       "assets/images/LednicaGorna/Lednica_2.jpg",
@@ -22,7 +22,7 @@
   },
   {
     "name": "Mietniów",
-    "description": "Inwestycja - Mietniów",
+    "description": "Wygoda codziennego życia.",
     "images": [
       "assets/images/Mietniow/Mietniow_1.jpg",
       "assets/images/Mietniow/Mietniow_2.jpg",
