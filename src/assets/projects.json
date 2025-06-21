@@ -2,7 +2,8 @@
   {
     "name": "Domy przy Brzozowej",
     "description": "Przyjazna, zielona okolica w rejonie Zakrzowa.",
-    "images": ["assets/images/brzozowa1.jpg"]
+    "images": ["assets/images/brzozowa1.jpg"],
+    "link": "https://domyzakrzow.pl"
   },
   {
     "name": "Lednica Górna",
